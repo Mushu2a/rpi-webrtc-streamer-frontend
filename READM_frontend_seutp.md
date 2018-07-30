@@ -41,6 +41,10 @@ Web Front-End uses Firebase's Realtime Database (not Firestore) and Stroage/Host
 ```
 git clone https://github.com/kclyu/rpi-webrtc-streamer-frontend
 cd rpi-webtc-streamer-frontend/web
+
+cd functions # before deploy and have an error
+npm install # install eslint dependence
+
 npm -g install firebase-tools
 firebase login  # firebase login will prompt new browser window to ask you to confirm
 firebase use --add  # select your new firebase project id
@@ -71,7 +75,7 @@ There are two configuration files for the Proxy.
 ```
 cd ~/Workspace/rpi-webrtc-streamer-frontend/proxy/etc
 cp proxy_config.json.template proxy_config.json
-vi proxy_config.json.template # Use a text editor that is easy to use.
+vi proxy_config.json # Use a text editor that is easy to use.
 ```
 In the "email-password" section, change your email and password to the email and password registered on the Firebase.
 In the local-device-config entry, the URL must be the WS URL to connect to RWS. If you are using a different port, you must use the modified port number.
@@ -94,7 +98,7 @@ Please refer to the example below.
 ```
 cd ~/Workspace/rpi-webrtc-streamer-frontend/proxy/etc
 cp firebase_config.json.template firebase_config.json
-vi proxy_config.json.template # Use a text editor that is easy to use.
+vi firebase_config.json # Use a text editor that is easy to use.
 ```
 
 ### Firebase connection verification
